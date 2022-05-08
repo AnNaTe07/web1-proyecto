@@ -3,7 +3,8 @@ header{
     text-align: left;
 }
 .barra{
-    margin: auto;
+    margin-inline-start: auto;
+    margin-top: auto;
     background-color:#add8e6;
     text-align: center;
     height: auto;
