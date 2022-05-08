@@ -2,6 +2,12 @@ header{
     background-color:#add8e6;
     text-align: left;
 }
+.barra{
+    background-color:#add8e6;
+    text-align: center;
+
+
+}
 h1{
     font-size: 30px;
     font-family:sans-serif;
@@ -11,7 +17,7 @@ h2{
     font: bold 14px sans-serif;
 }
 header, section, footer{
-    border: 3px solid black;
+    
     display: block;
 }
 body{
