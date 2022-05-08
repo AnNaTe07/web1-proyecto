@@ -3,6 +3,7 @@ header{
     text-align: left;
 }
 .barra{
+    margin: auto;
     background-color:#add8e6;
     text-align: center;
     height: auto;
@@ -47,6 +48,7 @@ float: right;
 margin:20px;
 }
 .pie{
+    text-align: center;
     background-color: black;
     color: white;
     clear:both;
