@@ -1,6 +1,5 @@
 header{
-    background-color:#add8e6;
-    text-align: left;
+    
 }
 .barra{
     margin-inline-start: auto;
@@ -13,40 +12,29 @@ header{
 
 }
 h1{
-    font-size: 30px;
-    font-family:sans-serif;
-    font-weight: bold;
+   
 }
 h2{
-    font: bold 14px sans-serif;
+   
 }
 header, section, footer{
     
-    display:flex;
+    
 }
 body{
-    text-align: center;
-    width: 500;
-    float:left;
+  
 }
 .cuerpo{
     background-color: whitesmoke;
 }
 nav{
-    background-color: beige;
-    padding: 5px;
-    text-align: left;
+
 }
 nav li{
-    list-style: none;
-    padding: 5px;
-    font:bold 14px verdana;
-    display:inline-block;
+   
 }
 aside{
-width: 250px;
-float: right;
-margin:20px;
+
 }
 .pie{
     text-align: center;
