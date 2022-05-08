@@ -20,7 +20,7 @@ h2{
 }
 header, section, footer{
     
-    display: block;
+    display:flex;
 }
 body{
     text-align: center;
