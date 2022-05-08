@@ -28,7 +28,7 @@ body{
     float:left;
 }
 .cuerpo{
-    background-color: antiquewhite;
+    background-color: whitesmoke;
 }
 nav{
     background-color: beige;
@@ -47,5 +47,7 @@ float: right;
 margin:20px;
 }
 .pie{
+    background-color: black;
+    color: white;
     clear:both;
 }
