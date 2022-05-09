@@ -5,9 +5,7 @@ h1 {
    
 }
 body {
-    background-color:#add8e6;
-    width: 50vw;
-    height: 50vh;
+    background-color: whitesmoke;
     
     
 }
@@ -29,7 +27,10 @@ h2 {
 
 }
 .cuerpo{
-    background-color: whitesmoke;
+    
+    background-color:#add8e6;
+    width: 50vw;
+    height: 50vh;
 }
 
 .pie{
