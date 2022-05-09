@@ -26,11 +26,14 @@ h2 {
 
 
 }
-.cuerpo{
-    
+.init {
     background-color:#add8e6;
     width: 50vw;
     height: 50vh;
+}
+.cuerpo{
+    
+    
 }
 
 .pie{
