@@ -1,50 +1,109 @@
 p {
     text-align: left;
 }
-h1 {
-   
-}
-body {
-    
-    
-    
-}
-h2 {
 
-}
 * {
-    padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    padding: 90px 20px 0;
+}
+header{
+    background-color: cadetblue;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
-.init {
-   
-}
+
 .cuerpop{
    align-content: center;
     background-color: rgb(233, 222, 222);
     
 }
 
-.pie{
-    display:block;
-    text-align: center;
-    background-color: black;
-    color: white;
-    clear:both;
-}
 
-  .nav{
-      display: inline-block;
+
+  nav{
+      display: flex;
+      justify-content: space-between;      
       background-color: cadetblue;
       color: #fff;
       padding: 10px 30px;
       text-decoration: none;
+      max-width: 992px;
+      left:100%
+  }
+  .nav{
+      padding: 8px 12px;
+      border-radius: 3px;
+      transition: 0.5s;
   }
   .nav:hover{
-      background-color: cornflowerblue;
+      margin: 0 auto;
+      background-color: rgb(35, 70, 136);
   }
-  nav{
-      background-color: cadetblue;
-      padding: 10px;
+ 
+  .pelota{
+      padding: 0 40;
+      line-height: 80px;
   }
+  .nav-ul{
+      display: flex;
+      margin-right: 40px;
+      list-style: none;      
+  }
+  .nav-li{
+      font-size: 18px;
+      margin: 0 10px;
+      line-height: 80px;
+      text-transform: uppercase;
+      width: max-content;
+
+  }
+  .menu-navegador{
+color: white;
+background: none;
+border: none;
+font-size: 30px;
+padding: 0 20px;
+line-height: 60px;
+display: none;
+
+  }
+  @media(max-width:768px){
+      header{
+          height: 60px;
+      }
+      nav{
+          flex-direction: column;
+          background-color:cadetblue ;
+          position:fixed;
+          align-items: center;
+          margin-right: 20px;
+          left: 0;
+          top: 60px;
+          width: 100%;
+          padding: 10 0;
+          overflow-y: auto;
+
+      }
+      .menu-navegador{
+          display: block;
+      }
+      .menu_v{
+          left:0;
+      }
+  }
+  .pie{
+    display:block;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center; 
+    clear:both;
+}
