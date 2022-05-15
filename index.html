@@ -12,40 +12,41 @@
         <meta name="robots" content="follow o no follow">
         <link rel="stylesheet" href="estilo.css"><!--enlace de html con css-->
         <link rel="icon" href="./ico/pelotaArg.ico">
+        <script defer src="index.js"></script>
     </head>
 
     <body>
        <div>
-        <header class="header" >                        
-            <div class="a">
+        <header>                       
                 <nav><!--barra de navegacion-->  
-                        <a class="pelota" href="./images/pelotaArg.png"></a> 
+                        <img class="pelota" width="7%" src="./images/pelotaArg.png"/>
                         <button class="menu-navegador " >
                             <i class="menu3" href="./images/menu 3 lineas.png"></i>
                         </button>
-                        <ul class="nav-ul menu_v">
-                            <li class="nav-li">
-                                <a class="nav" href="index.html">Inicio </a>
-                            </li>
-                            <li class="nav-li">
-                                <a class="nav" href="historia.html">Historia </a>  
-                            </li>
-                            <li class="nav-li">
-                                <a class="nav" href="participacion.html">Participacion en los mundiales </a>    
-                            </li>
-                            <li class="nav-li">
-                                <a class="nav" href="planteles.html">Planteles </a>   
-                            </li>
-                            <li class="nav-li">
-                                <a class="nav" href="form.html">Form </a>   
-                            </li>                                             
-                        </ul>            
-                                   
+                        <div id="menuppal">
+                            <ul class="nav-ul ">
+                                <li class="nav-li">
+                                    <a class="nav menu_v" href="index.html">Inicio </a>
+                                </li>
+                                <li class="nav-li">
+                                    <a class="nav menu_v" href="historia.html">Historia </a>  
+                                </li>
+                                <li class="nav-li">
+                                    <a class="nav menu_v" href="participacion.html">Participacion en los mundiales </a>    
+                                </li>
+                                <li class="nav-li">
+                                    <a class="nav menu_v" href="planteles.html">Planteles </a>   
+                                </li>
+                                <li class="nav-li">
+                                    <a class="nav menu_v" href="form.html">Form </a>   
+                                </li>                                             
+                            </ul>       
+                        </div>                                              
                 </nav>
-            </div>            
+                       
         </header> 
 
-        <h1 align="center">Selección Argentina en los mundiales de futbol </h1> 
+        <h1 align="center" id="titulos">Selección Argentina en los mundiales de futbol </h1> 
 
         <div class="b">
 
@@ -59,32 +60,26 @@
             </div>
 
         </div>
-       
-   
-
-        <div class="c">
 
 
             <aside><!--para colocar contenido relacionado, menos importante-->
+               <h3 id="tit.aside">
                 Contáctanos
+               </h3>
+                
     
-               <ul>
-                  <li><img src="./images/facebook.png"  width="40" height="40" title="Facebook"/> <a href="http://facebook.com">facebook/argentinamundiales.com</a></li>
-                  <li><img src="./images/correoElectronico.png"  width="40" height="40"  title="Correo electrónico"/> <a href="http://outlook.com">argentinaenlosmundiales@hotmail.com</a></li>
-                  <li><img src="./images/telefono.png" width="40" height="40" title="Teléfono"/>  Teléfono: 2664070707</li>
-                  <li><img src="./images/instagram.png" width="40" height="40" title="Instagram"/>  <a href="http://instagram.com">instagram/argentinamundiales.com</a></li>
+               <ul class="ul-aside">
+                  <li><img style="float:left;" src="./images/facebook.png"  width="30" height="30" title="Facebook"/> <a href="http://facebook.com"> facebook/argentinamundiales.com</a></li>
+                  <li><img style="float:left;" src="./images/correoElectronico.png"  width="30" height="30"  title="Correo electrónico"/> <a href="http://outlook.com"> argentinaenlosmundiales@hotmail.com</a></li>
+                  <li><img style="float:left;" src="./images/telefono.png" width="30" height="30" title="Teléfono"/>  Teléfono: 2664070707</li>
+                  <li><img style="float:left;" src="./images/instagram.png" width="30" height="30" title="Instagram"/>  <a href="http://instagram.com"> instagram/argentinamundiales.com</a></li>
                </ul>       
                     
             </aside>
-        </div>
-       
-
-        <div class="d">
 
             <footer class="pie">
                 Derechos reservados-Andrea...
-          </footer>
-        </div>
+            </footer>
 
        
     </div>
