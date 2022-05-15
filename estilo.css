@@ -5,12 +5,11 @@
     
 }
 #titulos{
-    margin: 100px;
+    margin: 90px;
 }
 
 ul .nav-li{
-    display: flex;
-  
+    display: flex;  
     right: 0%;
   
 }
@@ -25,39 +24,38 @@ ul .nav-li{
     padding: 0 20px;
     line-height: 60px;
     cursor:pointer;
-    display: none;
-    
-      }
+    display: none;    
+ }
 
 nav{
     display:inline;
     justify-content: space-between;   
-    padding: 20px 20px;  
+    padding: 2% 2%;  
     font-family: Georgia;
     background-color: rgb(162, 189, 238);
-    height: 80px;
+    height: 12%;
     position:absolute;
     width: 100%;
     top: 0;    
    
 }
 .nav{
-    padding: 10px 12px;
-    border-radius: 3px;
+    padding: 1px 2px;
+    border-radius: 1%;
 }
 .nav-ul{
     display: flex;                  
 }
 .nav-li{
-    font-size: 18px;    
+    font-size: 1.2em;    
     color: rgb(245, 238, 238);
-    margin: 0 10px;
-    line-height: 60px;     
+    margin: 0 30px;
+    line-height: 100%;     
     width: max-content;
     list-style: none;
 }
 .nav:hover{
-    margin: 0 auto;
+    margin: 0 2%;
     background-color: rgb(98, 148, 241);
 }
 
@@ -73,7 +71,7 @@ aside{
     display: flex; 
     background-color: rgb(162, 189, 238);
     justify-content:center;     
-    padding: 5px 5px;       
+    padding: 0.3% 0.3%;      
 }
 
 .ul-aside{  
@@ -84,17 +82,17 @@ aside{
 }
 
 li{ 
-    font-size: 15px;      
+    font-size: 1em;      
     color:black;
-    margin: 10px 25px;
-    line-height: 30px;      
+    margin: 1em 1.2em;
+    line-height: 1.6em;      
 }
 
 
   h3{
       font-family:'Lucida Sans';
       font-weight: bold;
-      font-size: 25px;  
+      font-size: 1.5em;  
       text-align: center;
       margin: auto;
       padding: auto;     
@@ -104,10 +102,10 @@ li{
     display:block;
     background-color: black;
     color: white;
-    font-size: 23px;
-    padding: 5px;
-    margin: 5px;
+    font-size: 1.5em;
+    padding: 1%;
+    margin: 2%;
     text-align: center; 
     margin: 0;
-    clear:both;
+    
 }
