@@ -16,16 +16,7 @@ h2 {
     padding: 0;
     margin: 0;
 }
-.barra{
-    margin-inline-start: auto;
-    margin-top: auto;
-    background-color:#add8e6;
-    text-align: center;
-    height: auto;
-    width: auto;
 
-
-}
 .init {
    
 }
@@ -41,12 +32,7 @@ h2 {
     color: white;
     clear:both;
 }
-.grid {
-    font-size: 1em;
-    font-family: 'Courier New', Courier, monospace;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+
   .nav{
       display: inline-block;
       background-color: cadetblue;
