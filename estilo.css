@@ -5,7 +5,7 @@
     
 }
 #titulos{
-    margin: 90px;
+    margin-top: 90px;
 }
 
 ul .nav-li{
@@ -56,7 +56,7 @@ nav{
 }
 .nav:hover{
     margin: 0 2%;
-    background-color: rgb(98, 148, 241);
+    background-color: rgb(116, 152, 219);
 }
 
 a:link, a:visited, a:active {
@@ -95,17 +95,113 @@ li{
       font-size: 1.5em;  
       text-align: center;
       margin: auto;
-      padding: auto;     
+      padding: 0.5%;     
   }
     
   .pie{
     display:block;
     background-color: black;
     color: white;
-    font-size: 1.5em;
-    padding: 1%;
-    margin: 2%;
+    font-size: 1.2em;
+    padding: 0.5%;
+    margin: 1%;
     text-align: center; 
     margin: 0;
     
 }
+.historia{
+    font-size: 1.3em;
+    font-family: Georgia;
+    margin: 1%;
+    
+    padding: 1%;
+}
+h2{
+    font-size: 1.3em;
+    font-family: Georgia;
+    margin: 0.9%;
+    padding: 1%;
+}
+p{
+    font-size: 0.9em;
+    font-family: Georgia;
+    margin: 1%;
+    padding: 0 1% 1.2% 1%;
+}
+
+.menuh{
+    font-size: 1em;
+    font-family: 'Georgia';
+    display:flex;
+    justify-content: space-between;   
+    padding: 1% 1%;  
+    border-color: rgb(162, 189, 238);
+    height: 10%;
+    line-height: 100%; 
+    width: 100%;
+    top: 0;      
+
+}
+.menuh:hover{  
+    margin: 0;
+    background-color: rgb(162, 189, 238); 
+}
+
+.menuf{
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Georgia';    
+    padding: 3% 3%;  
+    border-color: rgb(162, 189, 238);
+    height: 8%;
+    line-height: 100%; 
+    width: 100%;
+    top: 0;      
+}
+h1{
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+}
+.phistoria{
+    background-image: url("./images/maradona.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.abr{
+    text-align: center;
+    font-size: 1.4em;   
+    margin 0.5%;
+}
+.finalpar{
+    text-align: center;
+    font-size: 1.1em;
+    margin: 1%;
+    padding: 0.5%;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    font-family: Georgia;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+ thead{
+     background-color:rgb(162, 189, 238);
+     border-bottom: solid 5px;
+     color: white;
+ }
+
+ 
+th,
+td {
+    padding: 1%;
+    border: 1px solid black;
+}
+tr:hover{
+    background-color:rgb(162, 189, 238);
+     color: white;
+}
+ 
