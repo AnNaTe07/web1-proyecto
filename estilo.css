@@ -207,40 +207,7 @@ tr:hover{
      color: white;
 }
 
-.menu-navegador{
-    color: white;
-    background: none;
-    border: none;
-    font-size: 30px;
-    padding: 0 20px;
-    line-height: 60px;
-    cursor:pointer;
-    display: none;
-    
-      }
-      @media(max-width:768px){
-          header{
-              height: 60px;
-          }
-          nav{
-              flex-direction: column;
-              background-color:cadetblue ;
-              position:fixed;
-              align-items: center;
-              margin-right: 20px;
-              left: 0;
-              top: 60px;
-              width: 100%;
-              padding: 10 0;
-              overflow-y: auto;
-    
-          }
-          .menu-navegador{
-              display: block;
-          }
-          .menu_v{
-              left:0;
-          }
-      }
+
+      
     
  
