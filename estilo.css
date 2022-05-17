@@ -1,15 +1,17 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    list-style: none; 
-    
+    list-style: none;     
 }
+
 #titulos{
     margin-top: 90px;
 }
 
 ul .nav-li{
     display: flex;  
+    float: none;
+    position:initial;
     right: 0%;
   
 }
@@ -30,11 +32,11 @@ ul .nav-li{
 nav{
     display:inline;
     justify-content: space-between;   
-    padding: 2% 2%;  
+    padding: 2% 2%;
     font-family: Georgia;
     background-color: rgb(162, 189, 238);
-    height: 12%;
     position:absolute;
+    height: 12%;
     width: 100%;
     top: 0;    
    
