@@ -5,7 +5,7 @@
 }
 
 #titulos{
-    margin-top: 90px;
+    margin-top: 10%;
 }
 
 ul .nav-li{
@@ -30,12 +30,12 @@ ul .nav-li{
  }
 
 nav{
-    display:inline;
+    display:flexbox;
     justify-content: space-between;   
-    padding: 2% 2%;
+    padding: 2%;
     font-family: Georgia;
     background-color: rgb(162, 189, 238);
-    position:absolute;
+    position:fixed;
     height: 12%;
     width: 100%;
     top: 0;    
@@ -70,14 +70,14 @@ a{
 
 
 aside{
-    display: flex; 
+    display:flexbox;
     background-color: rgb(162, 189, 238);
-    justify-content:center;     
+    justify-content:flex-start;    
     padding: 0.3% 0.3%;      
 }
 
 .ul-aside{  
-    display: flex;    
+    display: flex; 
     justify-content: space-between; 
     margin: auto;
     padding: auto;
@@ -101,7 +101,7 @@ li{
   }
     
   .pie{
-    display:block;
+    display:flexbox;
     background-color: black;
     color: white;
     font-size: 1.2em;
@@ -207,7 +207,31 @@ tr:hover{
      color: white;
 }
 
-
+@media(max-width:768px){
+   
+          header{
+              height: 60px;
+          }
+          nav{
+              flex-direction: column;
+              background-color:cadetblue ;
+              position:fixed;
+              align-items: center;
+              margin-right: 20px;
+              left: 0;
+              top: 60px;
+              width: 100%;
+              padding: 10 0;
+              overflow-y: auto;
+    
+          }
+          .menu-navegador{
+              display: block;
+          }
+          .menu_v{
+              left:0;
+          }
+      }
       
     
  
