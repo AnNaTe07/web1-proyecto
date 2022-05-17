@@ -13,7 +13,14 @@ a:link, a:visited, a:active {
 a{
     color: black; 
 }
-
+h3{
+    font-family:'Lucida Sans';
+    font-weight: bold;
+    font-size: 1.5em;  
+    text-align:left;
+    margin:auto;
+    padding:auto;     
+}
   
 .pie{
     display:flexbox;
@@ -89,10 +96,22 @@ h1{
     background-color: rgb(162, 189, 238); 
 }
 
+.historia{
+    font-size: 1.3em;
+    font-family: Georgia;
+    margin: 1%;    
+    padding: 1%;
+}
 .phistoria{
     background-image: url("./images/maradona.png");
     background-position: center;
     background-repeat: no-repeat;
+}
+h2{
+    font-size: 1.3em;
+    font-family: Georgia;
+    margin: 0.9%;
+    padding: 1%;
 }
 
 p{
@@ -114,6 +133,6 @@ p{
     top: 0;      
 }
 .hover:hover{
-    background-color:grey;
-    color: white;
+    background-color:white;
+    color:black;
 }
