@@ -5,62 +5,8 @@
 }
 
 #titulos{
-    margin-top: 10%;
+    margin-top: 5%;
 }
-
-ul .nav-li{
-    display: flex;  
-    float: none;
-    position:initial;
-    right: 0%;
-  
-}
-#menuppal{
-    float: right;
-}
-.menu-navegador{
-    color: white;
-    background: none;
-    border: none;
-    font-size: 30px;
-    padding: 0 20px;
-    line-height: 60px;
-    cursor:pointer;
-    display: none;    
- }
-
-nav{
-    display:flexbox;
-    justify-content: space-between;   
-    padding: 2%;
-    font-family: Georgia;
-    background-color: rgb(162, 189, 238);
-    position:fixed;
-    height: 12%;
-    width: 100%;
-    top: 0;    
-   
-}
-.nav{
-    padding: 1px 2px;
-    border-radius: 1%;
-}
-.nav-ul{
-    display: flex;                  
-}
-.nav-li{
-    font-size: 1.2em;    
-    color: rgb(245, 238, 238);
-    margin: 0 30px;
-    line-height: 100%;     
-    width: max-content;
-    list-style: none;
-}
-.nav:hover{
-    margin: 0 2%;
-    background-color: rgb(116, 152, 219);
-}
-
 a:link, a:visited, a:active {
     text-decoration:none;
 }
@@ -68,39 +14,8 @@ a{
     color: black; 
 }
 
-
-aside{
-    display:flexbox;
-    background-color: rgb(162, 189, 238);
-    justify-content:flex-start;    
-    padding: 0.3% 0.3%;      
-}
-
-.ul-aside{  
-    display: flex; 
-    justify-content: space-between; 
-    margin: auto;
-    padding: auto;
-}
-
-li{ 
-    font-size: 1em;      
-    color:black;
-    margin: 1em 1.2em;
-    line-height: 1.6em;      
-}
-
-
-  h3{
-      font-family:'Lucida Sans';
-      font-weight: bold;
-      font-size: 1.5em;  
-      text-align: center;
-      margin: auto;
-      padding: 0.5%;     
-  }
-    
-  .pie{
+  
+.pie{
     display:flexbox;
     background-color: black;
     color: white;
@@ -108,79 +23,9 @@ li{
     padding: 0.5%;
     margin: 1%;
     text-align: center; 
-    margin: 0;
-    
-}
-.historia{
-    font-size: 1.3em;
-    font-family: Georgia;
-    margin: 1%;
-    
-    padding: 1%;
-}
-h2{
-    font-size: 1.3em;
-    font-family: Georgia;
-    margin: 0.9%;
-    padding: 1%;
-}
-p{
-    font-size: 0.9em;
-    font-family: Georgia;
-    margin: 1%;
-    padding: 0 1% 1.2% 1%;
-}
-
-.menuh{
-    font-size: 1em;
-    font-family: 'Georgia';
-    display:flex;
-    justify-content: space-between;   
-    padding: 1% 1%;  
-    border-color: rgb(162, 189, 238);
-    height: 10%;
-    line-height: 100%; 
-    width: 100%;
-    top: 0;      
-
-}
-.menuh:hover{  
-    margin: 0;
-    background-color: rgb(162, 189, 238); 
-}
-
-.menuf{
-    text-align: center;
-    font-size: 1em;
-    font-family: 'Georgia';    
-    padding: 3% 3%;  
-    border-color: rgb(162, 189, 238);
-    height: 8%;
-    line-height: 100%; 
-    width: 100%;
-    top: 0;      
-}
-h1{
-    margin: 1%;
-    padding: 1%;
-    text-align: center;
-}
-.phistoria{
-    background-image: url("./images/maradona.png");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.abr{
-    text-align: center;
-    font-size: 1.4em;   
-    margin 0.5%;
-}
-.finalpar{
-    text-align: center;
-    font-size: 1.1em;
-    margin: 1%;
-    padding: 0.5%;
-}
+    margin: 0;    
+}    
+ 
 
 table {
     width: 100%;
@@ -207,31 +52,63 @@ tr:hover{
      color: white;
 }
 
-@media(max-width:768px){
-   
-          header{
-              height: 60px;
-          }
-          nav{
-              flex-direction: column;
-              background-color:cadetblue ;
-              position:fixed;
-              align-items: center;
-              margin-right: 20px;
-              left: 0;
-              top: 60px;
-              width: 100%;
-              padding: 10 0;
-              overflow-y: auto;
-    
-          }
-          .menu-navegador{
-              display: block;
-          }
-          .menu_v{
-              left:0;
-          }
-      }
-      
-    
- 
+.abr{
+    text-align: center;
+    font-size: 1.4em;   
+    margin 0.5%;
+}
+
+.finalpar{
+    text-align: center;
+    font-size: 1.1em;
+    margin: 1%;
+    padding: 0.5%;
+}
+h1{
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+}
+
+.menuh{
+    font-size: 1em;
+    font-family: 'Georgia';
+    display:flex;
+    justify-content: space-between;   
+    padding: 1% 1%;  
+    border-color: rgb(162, 189, 238);
+    height: 10%;
+    line-height: 100%; 
+    width: 100%;
+    top: 0;      
+
+}
+.menuh:hover{  
+    margin: 0;
+    background-color: rgb(162, 189, 238); 
+}
+
+.phistoria{
+    background-image: url("./images/maradona.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+p{
+    font-size: 0.9em;
+    font-family: Georgia;
+    margin: 1%;
+    padding: 0 1% 1.2% 1%;
+}
+
+.menuf{
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Georgia';    
+    padding: 3% 3%;  
+    border-color: rgb(162, 189, 238);
+    height: 8%;
+    line-height: 100%; 
+    width: 100%;
+    top: 0;      
+}
