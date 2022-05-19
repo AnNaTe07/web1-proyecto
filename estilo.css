@@ -1,25 +1,51 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
+* {    
+    box-sizing:border-box;
     list-style: none;     
 }
-
-#titulos{
-    margin-top: 5%;
+body{
+    margin: 0;
 }
+
 a:link, a:visited, a:active {
     text-decoration:none;
 }
 a{
     color: black; 
 }
-h3{
-    font-family:'Lucida Sans';
-    font-weight: bold;
-    font-size: 1.5em;  
-    text-align:left;
-    margin:auto;
-    padding:auto;     
+nav{
+    
+    width: 100vw;
+    height: 60px;    
+    background-color: rgb(162, 189, 238);
+}
+.li-nav{
+    font-size: 1.2em; 
+    margin: 0 20px;
+    line-height: 100%; 
+}
+.ul-nav{
+    display: flex;
+    justify-content: space-between;
+    float: right; 
+    
+}
+
+.box{
+    display:flex;
+    justify-content:space-between;
+    margin-top: 5px;
+}
+#pelota{
+    margin-left: 5px;
+
+}
+.nav{    
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10%;
+}
+.nav:hover{    
+    background-color: rgb(116, 152, 219);
 }
   
 .pie{
@@ -88,7 +114,7 @@ h1{
     height: 10%;
     line-height: 100%; 
     width: 100%;
-    top: 0;      
+    top: 0;     
 
 }
 .menuh:hover{  
@@ -106,34 +132,65 @@ h1{
     background-image: url("./images/maradona.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 105%;
 }
 h2{
     font-size: 1.3em;
-    font-family: Georgia;
+    font-family:'Tenor Sans';
     margin: 0.9%;
     padding: 1%;
 }
 
 p{
-    font-size: 0.9em;
-    font-family: Georgia;
+    font-size: 1.1em;
+    font-family:'Tenor Sans';
     margin: 1%;
     padding: 0 1% 1.2% 1%;
 }
 
-.menuf{
+.menuf{   
+    border-radius: 50%;
+    border-style: double;
+    border-color:  rgb(162, 189, 238);
     text-align: center;
-    font-size: 1em;
-    font-family: 'Georgia';    
-    padding: 3% 3%;  
-    border-color: rgb(162, 189, 238);
-    height: 8%;
-    line-height: 100%; 
-    width: 100%;
-    top: 0;      
+    font-size: 2em;
+    font-family: 'Shadows Into Light';    
+    padding: 0.3%; 
+    margin-left: 45%;   
+    margin-bottom: 3%;   
+    width: 14%;
+    top: 5%;      
 }
 .hover:hover{
     background-color:white;
     color:black;
+}
+
+li{ 
+    font-size: 1em;      
+    color:black;
+    margin: 1em 1.2em;
+    line-height: 1.4em;      
+}
+aside{
+    width: 100%;
+    height: 80px; 
+    display: flex;  
+    justify-content
+    align-items:flex-end;    
+    background-color: rgb(162, 189, 238);      
+    padding: 0.5% 0.5%;        
+}
+.li-as{
+  margin: auto;    
+}
+
+
+span{
+    font-size: 1.5em;
+}
+.ul-aside{    
+    display:flex;
+    justify-content:space-between;    
+   
 }

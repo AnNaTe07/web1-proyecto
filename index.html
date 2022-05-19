@@ -10,7 +10,13 @@
         <meta name="copyright" content="">
         <meta name="robots" content="index o noindex">
         <meta name="robots" content="follow o no follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="estilo.css"><!--enlace de html con css-->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+
         <link rel="icon" href="./ico/pelotaArg.ico">
         <script defer src="index.js"></script>
     </head>
@@ -19,34 +25,37 @@
        <div>
         <header>                       
                 <nav><!--barra de navegacion-->  
-                        <img class="pelota" width="7%" src="./images/pelotaArg.png"/>
-                        <button class="menu-navegador " >
-                            <i class="menu3" href="./images/menu 3 lineas.png"></i>
+                    <div class="box">
+                        <img id="pelota" width="7%" src="./images/pelotaArg.png"/>
+                        <button class="menu-navegador">
+                            <i href="./images/menu 3 lineas.png"></i>
                         </button>
                         <div id="menuppal">
-                            <ul class="nav-ul ">
-                                <li class="nav-li">
+                            <ul class="ul-nav">
+                                <li class="li-nav">
                                     <a class="nav menu_v" href="index.html">Inicio </a>
                                 </li>
-                                <li class="nav-li">
+                                <li class="li-nav">
                                     <a class="nav menu_v" href="historia.html">Historia </a>  
                                 </li>
-                                <li class="nav-li">
+                                <li class="li-nav">
                                     <a class="nav menu_v" href="participacion.html">Participacion en los mundiales </a>    
                                 </li>
-                                <li class="nav-li">
+                                <li class="li-nav">
                                     <a class="nav menu_v" href="planteles.html">Planteles </a>   
                                 </li>
-                                <li class="nav-li">
+                                <li class="li-nav">
                                     <a class="nav menu_v" href="form.html">Form </a>   
                                 </li>                                             
                             </ul>       
-                        </div>                                              
+                        </div>     
+                    </div>
+                                                                
                 </nav>
                        
         </header> 
         <div class="a">
-             <h1 align="center" id="titulos">Selección Argentina en los mundiales de futbol </h1> 
+             <h1 align="center">Selección Argentina en los mundiales de futbol </h1> 
         </div>
         
 
@@ -55,26 +64,32 @@
                 <img src="images/messi.png" width="30%" alt="Lionel Messi" title="Messi"/>
             </div>
 
+            <div class="carro">
+               <div class="boton adelante">
+                    &#60
+               </div>
+               <div class="boton atras">
+                    &#62
+               </div>
+               <a href="https://www.w3schools.com">
+            </div>
         </div>
 
 
             <aside><!--para colocar contenido relacionado, menos importante-->
-               <h3 id="tit.aside">
-                Contáctanos
-               </h3>
-                
-    
+                            
                <ul class="ul-aside">
-                  <li><img style="float:left;" src="./images/facebook.png"  width="30" height="30" title="Facebook"/> <a href="http://facebook.com"> facebook/argentinamundiales.com</a></li>
-                  <li><img style="float:left;" src="./images/correoElectronico.png"  width="30" height="30"  title="Correo electrónico"/> <a href="http://outlook.com"> argentinaenlosmundiales@hotmail.com</a></li>
-                  <li><img style="float:left;" src="./images/telefono.png" width="30" height="30" title="Teléfono"/>  Teléfono: 2664070707</li>
-                  <li><img style="float:left;" src="./images/instagram.png" width="30" height="30" title="Instagram"/>  <a href="http://instagram.com"> instagram/argentinamundiales.com</a></li>
+                  <li class="li-as" ><span>Contáctanos</span></li>
+                  <li class="li-as"><img class="li-as"  src="./images/facebook.png"  width="30" height="30" title="Facebook"/> <a href="http://facebook.com"> facebook/argentinamundiales.com</a></li>
+                  <li class="li-as"><img class="li-as"  src="./images/correoElectronico.png"  width="30" height="30"  title="Correo electrónico"/> <a href="http://outlook.com"> argentinaenlosmundiales@hotmail.com</a></li>
+                  <li class="li-as"><img class="li-as" src="./images/telefono.png" width="30" height="30" title="Teléfono"/>  Teléfono: 2664070707</li>
+                  <li class="li-as"><img class="li-as" src="./images/instagram.png" width="30" height="30" title="Instagram"/>  <a href="http://instagram.com"> instagram/argentinamundiales.com</a></li>
                </ul>       
                     
             </aside>
 
             <footer class="pie">
-                Derechos reservados-Andrea...
+                Derechos reservados- &copy; Andrea ...
             </footer>
 
        
