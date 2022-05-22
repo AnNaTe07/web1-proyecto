@@ -1,4 +1,6 @@
 * {    
+    
+   
     box-sizing:border-box;
     list-style: none;     
 }
@@ -36,16 +38,18 @@ nav{
     margin-top: 5px;
 }
 #pelota{
-    margin-left: 5px;
+    margin-left: 5vw;
+    width:8vw;
 
 }
 .nav{    
     margin: 10px;
     padding: 10px;
-    border-radius: 10%;
+    
 }
 .nav:hover{    
     background-color: rgb(116, 152, 219);
+    border-radius: 10px;
 }
   
 .pie{
@@ -133,6 +137,8 @@ h1{
     background-position: center;
     background-repeat: no-repeat;
     background-size: 105%;
+    
+    
 }
 h2{
     font-size: 1.3em;
@@ -175,22 +181,47 @@ li{
 aside{
     width: 100%;
     height: 80px; 
-    display: flex;  
-    justify-content
-    align-items:flex-end;    
+    display:inline-flex; 
+    justify-content:space-between;
+    align-items:center;    
     background-color: rgb(162, 189, 238);      
-    padding: 0.5% 0.5%;        
+       
 }
 .li-as{
-  margin: auto;    
+    display:inline-flex;   
+    justify-content: baseline;
 }
 
 
 span{
     font-size: 1.5em;
+   
 }
 .ul-aside{    
     display:flex;
-    justify-content:space-between;    
-   
+    justify-content:space-between;      
 }
+
+.carrousel {
+    max-width: 200vw;
+    margin: 0 auto;
+    display:flex;
+}
+#imagen {
+    width: 70vw;
+    height: 30vw;
+    margin: 0 auto;
+    background-size: cover;
+}
+.controles{
+    width: 50vw;;
+    height: 20%; 
+    margin-left: auto;     
+}
+#anterior{
+    margin-left: 300px;
+}
+#siguiente{
+    margin-right: 300px;
+}
+
