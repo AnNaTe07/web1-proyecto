@@ -19,7 +19,7 @@ window.onload = function () {
         'carrusel/2022.jpg'
 
     ];
-    const TIEMPO_MILISEG = 3000;
+    const TIEMPO_MILISEG = 2500;
     let posicionActual = 0;
     let $botonRetroceder = document.querySelector('#anterior');
     let $botonAvanzar = document.querySelector('#siguiente');
