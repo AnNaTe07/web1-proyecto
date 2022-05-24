@@ -11,13 +11,14 @@ window.onload = function () {
         'carrusel/1982.jpg',
         'carrusel/1986.jpg',
         'carrusel/1990.jpg',
+        'carrusel/1994.jpg',
+        'carrusel/1998.jpg',
         'carrusel/2002.jpg',
         'carrusel/2006.jpg',
         'carrusel/2010.jpg',
         'carrusel/2014.jpg',
         'carrusel/2018.jpg',
         'carrusel/2022.jpg'
-
     ];
     const TIEMPO_MILISEG = 2500;
     let posicionActual = 0;
