@@ -42,7 +42,7 @@
                                 <a class="nav menu_v" href="planteles.html">Planteles </a>   
                             </li>
                             <li class="li-nav">
-                                <a class="nav menu_v" href="form.html">Form </a>   
+                                <a class="nav menu_v" href="form.html">Sorteo </a>   
                             </li>                                             
                         </ul>       
                     </div>     
@@ -52,21 +52,74 @@
             
                        
        </header> 
-       <h1 align="center">Form </h1> 
-       <body>
-        <form method="post">
-            <input type="text" name="nombre del identificador">
-            <input type"pasword" required="">
-            <!--required, si no lo completa no lo puede enviar-->
-            <input type"number">
-            <input type"email">
-            <input type"color">
-            <input type"range" min="1" max="5">
-            <input type"date">
-            <input type"time">
-            <input type"button" value="">
-            <input type"submit" value="enviar">
-        </form>
+       <h1 class="form-tit" align="center">Participa de éste fabuloso sorteo </h1> 
+       <div class="form-div">
+          <p class="form-p"> ¿Querés ganarte la camiseta de la seleccion Argenita?.</p>
+          <p class="form-p"> Es muy fácil, completá tus datos y ya estás participando.</p>
+          <p class="form-p"> El sorteo se realizará el dia 9 de julio de 2022 ante escribano público, en las oficinas comerciales, calle Qatar 2022.</p>
+       </div>
+      
+       <div>
+        <img id="camiseta"  src="./images/camiseta.jpg"/>
+       </div>
+       
+       
+
+            <div class="form">
+                <form action>
+                    <fieldset>
+
+                   <legend></legend>
+                  <label for="nombres">Nombres</label>
+                  <input type="text" id="nombres" name="nombres" placeholder="Nombre.." required>
+              
+                  <label for="apellido">Apellido</label>
+                  <input type="text" id="apellido" name="apellido" placeholder="Apellido.." required>
+
+                  <label for="dni"> DNI</label>
+                  <input type="number" id="dni" name="dni" placeholder="123456.." required>
+              
+                  <label for="correo">Correo electrónico</label>
+                  <input type="email" id="correo" name="correo" placeholder="...@.." required>
+
+                  <label for="telefono"> Teléfono</label>
+                  <input type="number" id="telefono" name="telefono" placeholder="123456.." required>
+
+                  <label for="provincia">Provincia de residencia:</label>
+                  <select id="provincia" name="seleccion">
+                    <option value selected disabled>Seleccione</option>
+                    <option value="buenoasaires">Buenos Aires</option>
+                    <option value="catamarca">Catamarca</option>
+                    <option value="chaco">Chaco</option>
+                    <option value="chubut">Chubut</option>
+                    <option value="cordoba">Córdoba</option>
+                    <option value="corrientes">Corrientes</option>
+                    <option value="entrerios">Entre Rios</option>
+                    <option value="formosa">Formosa</option>
+                    <option value="jujuy">Jujuy</option>
+                    <option value="lapampa">La Pampa</option>
+                    <option value="larioja">La Rioja</option>
+                    <option value="mendoza">Mendoza</option>
+                    <option value="misiones">Misiones</option>
+                    <option value="neuquen">Neuquen</option>
+                    <option value="rionegro">Rio Negro</option>
+                    <option value="salta">Salta</option>
+                    <option value="sanjuan">San Juan</option>
+                    <option value="sanluis">San Luis</option>
+                    <option value="santacruz">Santa Cruz</option>
+                    <option value="santafe">Santa Fe</option>
+                    <option value="santiagodelestero">Santiago del Estero</option>
+                    <option value="tierradelfuego">Tierra del Fuego</option>
+                    <option value="tucumn">Tucuman</option>
+                  </select>
+                
+                  <input type="submit" value="Confirmar">
+                </fieldset>
+                </form>
+              </div>
+
+            
+      
       
         <aside>    
 
