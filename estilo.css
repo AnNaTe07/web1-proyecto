@@ -12,42 +12,29 @@ a:link, a:visited, a:active {
 a{
     color: black; 
 }
-nav{    
-    width: 100vw;
-    max-width: 1500px;
-    height: 70px;    
-    background-color: rgb(162, 189, 238);  
-    
+header{
+    display: flex;
+    min-height: 70px;
+    background-color: rgb(162, 189, 238); 
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;
 }
-ul{
-    margin-left: 300px;
+.logo{
+    display: flex;
+    align-items: center;
 }
-
-header nav ul{
-    overflow:hidden;    
-}
-
-header nav ul a{
-    padding: 20px;
-    
-}
-header nav span{
-    margin-right: 30px;    
-}
-.menu-bar{
-    display: none;
+.logo-img{
+    height: 60px;
+    margin-left: 10px;
 }
 
-#pelota{
-    margin:auto;
-    width:7vw;
-    height: 7vw;
-    position: absolute;
+li{
+    float: left;
+    cursor:pointer;
 }
 .nav{    
-    display:inline;
-    float:left;
-    justify-items: flex-end;
+ 
     font-size: 1.2em; 
     margin: 20px 50px;  
     padding: 2px 10px;    
@@ -57,22 +44,37 @@ header nav span{
     border-radius: 5px;
 }
  
-
+@media(max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    aside{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0;
+    }
+    li{
+        float: none;
+        padding: 10px 0;
+    }
+}
 h1{
     margin: 1%;
     padding: 1%;
     text-align: center;
 }
 .carrousel {
-    max-width: 700vw;
+    max-width: 1500px;
     margin: 0 auto;
-    display:flex;
+ display: flex;
 }
 #imagen {   
     width: 800px;
     height: 500px;
     margin: 50px auto;
     background-size: cover;
+    object-fit: cover;
 }
 .controles{
     display: flex;
@@ -127,33 +129,28 @@ h1{
     
 }
 aside{
-    width: 100vw;
-    max-width: 2000px;
-    height: 70px;      
-    background-color: rgb(162, 189, 238);    
+    display: flex;
+    min-height: 70px;
+    background-color: rgb(162, 189, 238); 
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;   
 }
 
 span{
     font-size: 1.5em;   
+  
+    height: 60px;
+    margin-left: 10px;
 }
 
-.ul-aside{    
-    display:inline-flex;
-    flex-direction: row;
-    justify-content:space-between; 
-    margin:auto;
-    padding: 20px 60px;   
-}
 .li-as{
-    padding: auto;
+    float: left;   
+    font-size: 1.1em; 
+    margin: 5px 10px;  
+  
 }
 
-.a-aside{ 
-    font-size: 1.1em;      
-    color:black;
-    margin:0 10px;
-    line-height: 30px;      
-}
 
 footer{
     width: 100vw;
