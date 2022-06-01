@@ -98,60 +98,96 @@ window.onload = function () {
 
 //VALIDAR FORM
 
-function ver(e){
-    console.log(e);
-}
 
 function enviar(e){
     if(validar()){
-        let nombres=document.getElementById("nombres");
-        let apellido=document.querySelector("#apellido");
-        let dni=document.getElementById("dni");
-        let correo=document.forms.correo;
-        let telefono=document.getElementById("telefono");
+        let nombres=document.getElementById("f_nombres");
+        let apellido=document.getElementById("f_apellido");
+        let dni=document.getElementById("f_dni");
+        let correo=document.getElementById("f_correo");
+        let telefono=document.getElementById("f_telefono");
+
         let p =document.createElement("p");
-        p.innerHTML='${nombres.value} ${apellido.value} ,${dni.value} ,(${correo.value})';
+                
         
-        document.getElementById("demo").appendChild(p);
+
+        if(!f_nombres.value==""){
+         p.innerHTML=`${f_nombres.value}`;       
+        }
+    
+        if(!f_apellido.value==""){
+            p.innerHTML=`${f_apellido.value}`; 
+        }
+    
+        if(f_dni.value.length>0 && f_dni.value.length<7){
+          p.innerHTML=`${f_dni.value}`;
+        }
+
+    
+        if(er.test(f_correo.value)){
+           p.innerHTML=`${f_correo.value}`;
+        }
+
+        document.getElementById("prueba").appendChild(p);
+        
     }
-    return false;
+   
+    return false;//retorna falso porque no envia la informacion a ningun lado
 }
 
-function validar(e){/*classlist*/
-    let nombres=document.getElementById("nombres");
-    let apellido=document.querySelector("#apellido");
-    let dni=document.getElementById("dni");
-    let correo=document.forms.correo;
-    let telefono=document.getElementById("telefono");
+function validar(){
+    let nombres=document.getElementById("f_nombres");
+    let apellido=document.getElementById("f_apellido");
+    let dni=document.getElementById("f_dni");
+    let correo=document.getElementById("f_correo");
+    let telefono=document.getElementById("f_telefono");
     let errores =[];
-
-    let inputs = document.querySelectorAll("input");
-    console.log(inputs);
+    
     for(i=0;i<inputs.length;i++){
-        inputs[i].style.border="revert";/*style*/
+        inputs[i].style.border="revert";
     }
 
-    if(nombres.value.trim()==""){
-        errores.push("Nombres no puede ser vacio");
-        nombres.style.border="1px solid red";
+   
+
+    if(f_nombres.value.trim()==""){
+        f_nombres.style.border="2px dashed blue";
+        errores.push("Nombres no puede ser vacio");        
     }
 
-    if(apellido.value==""){
+    if(f_apellido.value.trim()==""){
+        f_apellido.style.border="2px dashed blue";
         errores.push("Apellido no puede ser vacio");
     }
 
-    if(dni.value==""){
+    if(f_dni.value==""){
+        f_dni.style.border="2px dashed blue";
         console.log("Dni no puede ser vacio");
-    }else if(dni.value.length>7){
-        errores.push("Dni no puede exceder 7 caracteres");
+    }else if(f_dni.value.length>7){
+        f_dni.style.border="2px dashed orange";
+        errores.push("Dni no puede exceder 8 caracteres");
     }
 
     let er=/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$ /;
 
-    if(!er.test(correo.value)){
+    if(!er.test(f_correo.value)){
+        f_correo.style.border="2px dashed blue";
         errores.push("Debe ser un e-mail válido");
     }
 
-    console.log(nombre);
-    return errores.length==0;
+
+
+
+
+let listaerrores_elem = document.querySelector("#listaerrores")
+listaerrores_elem.innerHTML = "";
+errores.forEach(e=>{
+    let li=document.createElement("li");
+    li.innerHTML=e;
+    listaerrores_elem.appendChild(li);
+    console.log(e);
+})
+
+
+
+return errores.length == 0;
 }
