@@ -117,7 +117,7 @@ function enviar(e){
     return false;
 }
 
-function vaidar(e){/*classlist*/
+function validar(e){/*classlist*/
     let nombres=document.getElementById("nombres");
     let apellido=document.querySelector("#apellido");
     let dni=document.getElementById("dni");
@@ -134,20 +134,16 @@ function vaidar(e){/*classlist*/
     if(nombres.value.trim()==""){
         errores.push("Nombres no puede ser vacio");
         nombres.style.border="1px solid red";
-    }else if(nombres.value.length>30){
-        errores.push("Nombres no puede exceder 30 caracteres");
     }
 
     if(apellido.value==""){
         errores.push("Apellido no puede ser vacio");
-    }else if(apellido.value.length>20){
-        errores.push("Apellido no puede exceder 20 caracteres");
     }
 
     if(dni.value==""){
         console.log("Dni no puede ser vacio");
     }else if(dni.value.length>7){
-        errores.push("Nombres no puede exceder 7 caracteres");
+        errores.push("Dni no puede exceder 7 caracteres");
     }
 
     let er=/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$ /;
