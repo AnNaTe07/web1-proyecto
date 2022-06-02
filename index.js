@@ -106,31 +106,19 @@ function enviar(e){
         let dni=document.getElementById("f_dni");
         let correo=document.getElementById("f_correo");
         let telefono=document.getElementById("f_telefono");
-
+        let provincia = document.getElementById("f_provincia");
+             
         let p =document.createElement("p");
-                
-        
-
-        if(!f_nombres.value==""){
-         p.innerHTML=`${f_nombres.value}`;       
-        }
-    
-        if(!f_apellido.value==""){
-            p.innerHTML=`${f_apellido.value}`; 
-        }
-    
-        if(f_dni.value.length>0 && f_dni.value.length<7){
-          p.innerHTML=`${f_dni.value}`;
-        }
-
-    
-        if(er.test(f_correo.value)){
-           p.innerHTML=`${f_correo.value}`;
-        }
-
-        document.getElementById("prueba").appendChild(p);
-        
+        p.innerHTML = `Nombre: ${f_nombres.value}  ${f_apellido.value}<br/> DNI: ${f_dni.value}<br/> e-mail: ${f_correo.value}<br/>
+        Telefono: ${f_telefono.value} <br/> Vive en: ${provincia.options[provincia.selectedIndex].value}`;
+        document.getElementById("validos").appendChild(p); 
     }
+       
+     
+
+            
+                 
+    
    
     return false;//retorna falso porque no envia la informacion a ningun lado
 }
@@ -141,50 +129,66 @@ function validar(){
     let dni=document.getElementById("f_dni");
     let correo=document.getElementById("f_correo");
     let telefono=document.getElementById("f_telefono");
+    let provincia= document.getElementById("f_provincia");
+
     let errores =[];
-    
+    let aciertos = [];
+
+    let inputs=document.querySelectorAll("input");
     for(i=0;i<inputs.length;i++){
         inputs[i].style.border="revert";
-    }
-
-   
+    }   
 
     if(f_nombres.value.trim()==""){
         f_nombres.style.border="2px dashed blue";
         errores.push("Nombres no puede ser vacio");        
+    }else{
+        aciertos.push("f_nombres.value"); 
     }
 
     if(f_apellido.value.trim()==""){
         f_apellido.style.border="2px dashed blue";
         errores.push("Apellido no puede ser vacio");
+    }else{
+        aciertos.push("f_apellido.value"); 
     }
 
-    if(f_dni.value==""){
+    if(f_dni.value.trim()=="" || isNaN(dni.value)){
         f_dni.style.border="2px dashed blue";
-        console.log("Dni no puede ser vacio");
-    }else if(f_dni.value.length>7){
+        errores.push("Dni no puede ser vacío y tiene que ser numérico");
+
+    }else if(f_dni.value.length<7 || f_dni.value.length>8){
         f_dni.style.border="2px dashed orange";
-        errores.push("Dni no puede exceder 8 caracteres");
+        errores.push("Dni no puede ser menor a 7 caracteres ni exceder 8 caracteres");
+    }else{
+        aciertos.push("f_dni.value"); 
     }
 
-    let er=/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$ /;
+    let er = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
     if(!er.test(f_correo.value)){
         f_correo.style.border="2px dashed blue";
         errores.push("Debe ser un e-mail válido");
+    }else{
+        aciertos.push("f_correo.value"); 
+    }
+    indice = document.getElementById("f_provincia").selectedIndex;
+    if( indice == null || indice == 0 ){
+        errores.push("Debe seleccionar provincia en donde vive")
+    }else{
+        aciertos.push("f_provincia.value"); 
     }
 
 
-
-
-
 let listaerrores_elem = document.querySelector("#listaerrores")
+
 listaerrores_elem.innerHTML = "";
+
 errores.forEach(e=>{
     let li=document.createElement("li");
     li.innerHTML=e;
     listaerrores_elem.appendChild(li);
-    console.log(e);
+  
 })
 
 
