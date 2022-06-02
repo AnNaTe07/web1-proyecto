@@ -30,7 +30,7 @@ header{
     margin-left: 10px;
 }
 
-li{
+nav li{
     float: left;
     cursor:pointer;
 }
@@ -341,3 +341,15 @@ input[type=text],input[type=email],input[type=number], select {
     background-color: #f2f2f2;    
   }
   
+  #listaerrores{
+    font-size: 1.5em;
+    color:rgb(240, 138, 80);   
+    margin: 0 20px;  
+}
+
+
+  #validos{
+    font-size: 1.5em;
+    color:cornflowerblue;   
+    margin: 0 20px;  
+}
