@@ -40,7 +40,7 @@ window.onload = function () {
         } else {
             posicionActual++;
         }
-        renderizarImagen();
+        actualizar();
     }
 
     /**
@@ -52,20 +52,20 @@ window.onload = function () {
         } else {
             posicionActual--;
         }
-        renderizarImagen();
+        actualizar();
     }
 
     /**
      * Funcion que actualiza la imagen de imagen dependiendo de posicionActual
      */
-    function renderizarImagen () {
+    function actualizar () {
         $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
     }
 
     /**
      * Activa el autoplay de la imagen
      */
-    function playIntervalo() {
+    function play() {
         intervalo = setInterval(pasarFoto, TIEMPO_MILISEG);
         // Desactivamos los botones de control
         $botonAvanzar.setAttribute('disabled', true);
@@ -78,7 +78,7 @@ window.onload = function () {
     /**
      * Para el autoplay de la imagen
      */
-    function stopIntervalo() {
+    function stop() {
         clearInterval(intervalo);
         // Activamos los botones de control
         $botonAvanzar.removeAttribute('disabled');
@@ -90,10 +90,10 @@ window.onload = function () {
     // Eventos
     $botonAvanzar.addEventListener('click', pasarFoto);
     $botonRetroceder.addEventListener('click', retrocederFoto);
-    $botonPlay.addEventListener('click', playIntervalo);
-    $botonStop.addEventListener('click', stopIntervalo);
+    $botonPlay.addEventListener('click', play);
+    $botonStop.addEventListener('click', stop);
     // Iniciar
-    renderizarImagen();
+    actualizar();
 } 
 
 //VALIDAR FORM
@@ -109,8 +109,13 @@ function enviar(e){
         let provincia = document.getElementById("f_provincia");
              
         let p =document.createElement("p");
-        p.innerHTML = `Nombre: ${f_nombres.value}  ${f_apellido.value}<br/> DNI: ${f_dni.value}<br/> e-mail: ${f_correo.value}<br/>
-        Telefono: ${f_telefono.value} <br/> Vive en: ${provincia.options[provincia.selectedIndex].text}`;
+        listaerrores.style.display="none";
+        validos.style.border="5px inset rgb(52, 55, 196)";  
+        p.innerHTML = `<b>Ya estás participando!! <br/> Nombre: ${f_nombres.value}  ${f_apellido.value}<br/> DNI: ${f_dni.value}<br/> e-mail: ${f_correo.value}<br/>
+        Provincia: ${provincia.options[provincia.selectedIndex].text}<br>`;
+        if(f_telefono.value != "" ){
+        p.innerHTML += `<b>Telefono: ${f_telefono.value}`;
+        }
         document.getElementById("validos").appendChild(p); 
         nombres.value="";
         apellido.value="";
@@ -140,20 +145,26 @@ function validar(){
     }   
 
     if(f_nombres.value.trim()==""){
+        listaerrores.style.border="10px outset rgb(196, 52, 76)";
         f_nombres.style.border="2px dashed blue";
         errores.push("Nombres no puede ser vacio");        
     }
 
     if(f_apellido.value.trim()==""){
+        listaerrores.style.border="10px outset rgb(196, 52, 76)";
         f_apellido.style.border="2px dashed blue";
         errores.push("Apellido no puede ser vacio");
     }
 
-    if(f_dni.value.trim()=="" || isNaN(dni.value)){
+    if(f_dni.value.trim()==""){
+        listaerrores.style.border="10px outset rgb(196, 52, 76)";
         f_dni.style.border="2px dashed blue";
-        errores.push("Dni no puede ser vacío y tiene que ser numérico");
-
+        errores.push("Dni no puede ser vacío");
+     }else if(isNaN(dni.value)){
+        f_dni.style.border="2px dashed red";
+        errores.push("Dni tiene que ser numérico");
     }else if(f_dni.value.length<7 || f_dni.value.length>8){
+        listaerrores.style.border="10px outset rgb(196, 52, 76)";
         f_dni.style.border="2px dashed orange";
         errores.push("Dni no puede ser menor a 7 caracteres ni exceder 8 caracteres");
     }
@@ -161,11 +172,13 @@ function validar(){
     let er = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
     if(!er.test(f_correo.value)){
+        listaerrores.style.border="10px outset rgb(196, 52, 76)";
         f_correo.style.border="2px dashed blue";
         errores.push("Debe ser un e-mail válido");
     }
-    indice = document.getElementById("f_provincia").selectedIndex;
+    let indice = document.getElementById("f_provincia").selectedIndex;
     if( indice == null || indice == 0 ){
+        listaerrores.style.border="10px outset rgb(196, 52, 76)";
         errores.push("Debe seleccionar provincia en donde vive")
     }
 
@@ -174,7 +187,8 @@ let listaerrores_elem = document.querySelector("#listaerrores")
 
 listaerrores_elem.innerHTML = "";
 
-errores.forEach(e=>{
+errores.forEach(e=>{ 
+    document.getElementById("listaerrores").style.visibility  
     let li=document.createElement("li");
     li.innerHTML=e;
     listaerrores_elem.appendChild(li);

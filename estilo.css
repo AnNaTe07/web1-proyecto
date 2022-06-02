@@ -341,15 +341,23 @@ input[type=text],input[type=email],input[type=number], select {
     background-color: #f2f2f2;    
   }
   
-  #listaerrores{
+  #listaerrores{    
     font-size: 1.5em;
-    color:rgb(240, 138, 80);   
+    color:rgb(59, 19, 9);   
     margin: 0 20px;  
+    display: block;
+    margin: 20px 455px; 
+    padding: 5px;  
+    border: solid white 3px; 
+    border-radius: 5px;    
 }
-
 
   #validos{
+    width: 50%;
+    border-radius: 5px;    
     font-size: 1.5em;
-    color:cornflowerblue;   
-    margin: 0 20px;  
+    text-align: center;
+    color:rgb(4, 15, 34);   
+    margin: 40px 300px;  
 }
+
