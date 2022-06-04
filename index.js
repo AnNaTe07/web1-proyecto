@@ -111,7 +111,7 @@ function enviar(e){
         let p =document.createElement("p");
         listaerrores.style.display="none";
         validos.style.border="5px inset rgb(52, 55, 196)";  
-        p.innerHTML = `<b>Ya estás participando!! <br/> Nombre: ${f_nombres.value}  ${f_apellido.value}<br/> DNI: ${f_dni.value}<br/> e-mail: ${f_correo.value}<br/>
+        p.innerHTML = `<strong>Ya estás participando!!</strong> <br> Nombre: <strong>${f_nombres.value}  ${f_apellido.value}</strong><br> DNI: ${f_dni.value}<br/> e-mail: ${f_correo.value}<br/>
         Provincia: ${provincia.options[provincia.selectedIndex].text}<br>`;
         if(f_telefono.value != "" ){
         p.innerHTML += `<b>Telefono: ${f_telefono.value}`;
