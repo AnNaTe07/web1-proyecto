@@ -1,7 +1,7 @@
 window.onload = function () {
     // Variables
     const IMAGENES = [
-        'carrusel/1930.jpg',
+        'carrusel/1930.jpg',      
         'carrusel/1934.jpg',
         'carrusel/1958.jpg',
         'carrusel/1962.jpg',
@@ -18,8 +18,10 @@ window.onload = function () {
         'carrusel/2010.jpg',
         'carrusel/2014.jpg',
         'carrusel/2018.jpg',
-        'carrusel/2022.jpg'
+        'carrusel/2022.png'
     ];
+
+
     const TIEMPO_MILISEG = 2500;
     let posicionActual = 0;
     let $botonRetroceder = document.querySelector('#anterior');
@@ -31,9 +33,9 @@ window.onload = function () {
 
     // Funciones
 
-    /**
-     * Funcion que cambia la foto en la siguiente posicion
-     */
+    
+     //Funcion que cambia la foto en la siguiente posicion
+     
     function pasarFoto() {
         if(posicionActual >= IMAGENES.length - 1) {
             posicionActual = 0;
@@ -43,9 +45,9 @@ window.onload = function () {
         actualizar();
     }
 
-    /**
-     * Funcion que cambia la foto en la anterior posicion
-     */
+    
+    // Funcion que cambia la foto en la anterior posicion
+     
     function retrocederFoto() {
         if(posicionActual <= 0) {
             posicionActual = IMAGENES.length - 1;
@@ -55,16 +57,16 @@ window.onload = function () {
         actualizar();
     }
 
-    /**
-     * Funcion que actualiza la imagen de imagen dependiendo de posicionActual
-     */
+    
+     //Funcion que actualiza la imagen de imagen dependiendo de posicionActual
+     
     function actualizar () {
         $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
     }
 
-    /**
-     * Activa el autoplay de la imagen
-     */
+    
+     //Activa el autoplay de la imagen
+     
     function play() {
         intervalo = setInterval(pasarFoto, TIEMPO_MILISEG);
         // Desactivamos los botones de control
@@ -75,9 +77,9 @@ window.onload = function () {
 
     }
 
-    /**
-     * Para el autoplay de la imagen
-     */
+    
+     //Para el autoplay de la imagen
+     
     function stop() {
         clearInterval(intervalo);
         // Activamos los botones de control
@@ -95,7 +97,6 @@ window.onload = function () {
     // Iniciar
     actualizar();
 } 
-
 //VALIDAR FORM
 
 
@@ -111,10 +112,13 @@ function enviar(e){
         let p =document.createElement("p");
         listaerrores.style.display="none";
         validos.style.border="5px inset rgb(52, 55, 196)";  
-        p.innerHTML = `<strong>Ya estás participando!!</strong> <br> Nombre: <strong>${f_nombres.value}  ${f_apellido.value}</strong><br> DNI: ${f_dni.value}<br/> e-mail: ${f_correo.value}<br/>
-        Provincia: ${provincia.options[provincia.selectedIndex].text}<br>`;
+        document.getElementById("messi").style.display="block";
+        document.getElementById("gol").style.display="block";
+       
+        p.innerHTML = `<b>Ya estás participando!!</b> <br> Nombre: <b>${f_nombres.value}  ${f_apellido.value}</b><br> DNI: <b>${f_dni.value}</b><br/> e-mail: <b>${f_correo.value}</b><br/>
+        Provincia: <b>${provincia.options[provincia.selectedIndex].text}</b><br>`;
         if(f_telefono.value != "" ){
-        p.innerHTML += `<b>Telefono: ${f_telefono.value}`;
+        p.innerHTML += `Telefono: <b>${f_telefono.value}</b>`;
         }
         document.getElementById("validos").appendChild(p); 
         nombres.value="";
@@ -161,6 +165,7 @@ function validar(){
         f_dni.style.border="2px dashed blue";
         errores.push("Dni no puede ser vacío");
      }else if(isNaN(dni.value)){
+        listaerrores.style.border="10px outset rgb(196, 52, 76)";
         f_dni.style.border="2px dashed red";
         errores.push("Dni tiene que ser numérico");
     }else if(f_dni.value.length<7 || f_dni.value.length>8){
