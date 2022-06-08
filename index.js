@@ -1,24 +1,24 @@
 window.onload = function () {
     // Variables
     const IMAGENES = [
-        'carrusel/1930.jpg',      
-        'carrusel/1934.jpg',
-        'carrusel/1958.jpg',
-        'carrusel/1962.jpg',
-        'carrusel/1966.jpg',
-        'carrusel/1974.jpg',
-        'carrusel/1978.jpg',
-        'carrusel/1982.jpg',
-        'carrusel/1986.jpg',
-        'carrusel/1990.jpg',
-        'carrusel/1994.jpg',
-        'carrusel/1998.jpg',
-        'carrusel/2002.jpg',
-        'carrusel/2006.jpg',
-        'carrusel/2010.jpg',
-        'carrusel/2014.jpg',
-        'carrusel/2018.jpg',
-        'carrusel/2022.png'
+        {plantel:"Plantel 1930", img:"carrusel/1930.jpg"},     
+        {plantel:"Plantel 1934", img:"carrusel/1934.jpg"},
+        {plantel:"Plantel 1958", img:"carrusel/1958.jpg"}, 
+        {plantel:"Plantel 1962", img:"carrusel/1962.jpg"},
+        {plantel:"Plantel 1966", img:"carrusel/1966.jpg"},
+        {plantel:"Plantel 1974", img:"carrusel/1974.jpg"},
+        {plantel:"Plantel 1978", img:"carrusel/1978.jpg"},
+        {plantel:"Plantel 1982", img:"carrusel/1982.jpg"},
+        {plantel:"Plantel 1986", img:"carrusel/1986.jpg"},
+        {plantel:"Plantel 1990", img:"carrusel/1990.jpg"},
+        {plantel:"Plantel 1994", img:"carrusel/1994.jpg"},
+        {plantel:"Plantel 1998", img:"carrusel/1998.jpg"},
+        {plantel:"Plantel 2002", img:"carrusel/2002.jpg"},
+        {plantel:"Plantel 2006", img:"carrusel/2006.jpg"},
+        {plantel:"Plantel 2010", img:"carrusel/2010.jpg"},
+        {plantel:"Plantel 2014", img:"carrusel/2014.jpg"},
+        {plantel:"Plantel 2018", img:"carrusel/2018.jpg"},
+        {plantel:"Plantel 2022", img:"carrusel/2022.png"},
     ];
 
 
@@ -27,6 +27,7 @@ window.onload = function () {
     let $botonRetroceder = document.querySelector('#anterior');
     let $botonAvanzar = document.querySelector('#siguiente');
     let $imagen = document.querySelector('#imagen');
+    let $texto=document.querySelector('#texto_carro');
     let $botonPlay = document.querySelector('#play');
     let $botonStop = document.querySelector('#stop');
     let intervalo;
@@ -61,7 +62,8 @@ window.onload = function () {
      //Funcion que actualiza la imagen de imagen dependiendo de posicionActual
      
     function actualizar () {
-        $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
+        $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual].img})`;
+        document.getElementById("texto_carro").innerHTML=IMAGENES[posicionActual].plantel;
     }
 
     

@@ -79,7 +79,7 @@ h1{
 .carrousel {
     max-width: 1500px;
     margin: 0 auto;
- display: flex;
+    display: flex;
 }
 #imagen {   
     width: 800px;
@@ -88,6 +88,18 @@ h1{
     background-size: cover;
     object-fit: cover;
 }
+#texto_carro{
+    font-weight: 500;
+    font-family: 'Charis SIL', serif; 
+    font-size: 35px;
+    margin-top:150px;
+    margin-left:500px;
+    color: rgb(61, 201, 175);
+    border-style: hidden;
+    background-color: rgb(41, 24, 24);
+    opacity: .7;
+}
+
 .controles{
     display: flex;
     justify-content: center;
